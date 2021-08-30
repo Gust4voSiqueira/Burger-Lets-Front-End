@@ -20,13 +20,13 @@ export default function ProductsProvider({ children }) {
     }
 
     function saveProduct(name, value, arquivo) {
-        let imagem = new FormData();
+        const imagem = new FormData();
 
-        imagem.append('file', {
-            imagem
+        imagem.append('imagem', {
+            arquivo
         });
 
-        api.post("/file", imagem, {
+        api.post("/post", imagem, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
@@ -37,10 +37,27 @@ export default function ProductsProvider({ children }) {
         })
     }
 
+    function deleteProduct(id) {
+        api.delete(`/delete/${id}`)
+            .then(function (response) {
+                console.log(response.data);
+            })
+    }
+
+    function editProduct(argumento, id) {
+        api.put(`/edit/${id}`,
+            argumento
+        ).then(function (response) {
+            console.log(response.data);
+        })
+    }
+
+
     const store = {
         products,
         deleteProduct,
-        saveProduct
+        saveProduct,
+        editProduct
     }
 
     return (
@@ -57,12 +74,14 @@ export function useProducts() {
     const {
         products,
         deleteProduct,
-        saveProduct
+        saveProduct,
+        editProduct
     } = context
 
     return {
         products,
         deleteProduct,
-        saveProduct
+        saveProduct,
+        editProduct
     }
 }

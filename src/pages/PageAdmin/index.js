@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import Products from "../../components/Products/Products";
 import { useProducts } from "../../services/hooks/useProducts";
+
+import ProductsAdminPage from './components/ProductsAdminPage'
 
 import './index.css'
 
@@ -17,7 +18,7 @@ export function PageAdmin() {
             <Header />
             <form className='products' enctype="multipart/form-data">
                 <div className='file-div'>
-                    <label className='file-div' for="arquivo">Enviar arquivo</label>
+                    <label className='file-div' id='file' for="arquivo">Enviar arquivo</label>
                     <input type="file" name="arquivo" id="arquivo" onChange={(e) => {
                         setFile(e.target.files[0])
                     }} />
@@ -33,7 +34,7 @@ export function PageAdmin() {
                 }} />
             </form>
             {products.map((products) => (
-                < Products key={products.id} id={products.id} name={products.name} value={products.value} createdAt={products.createdAt} updatedAt={products.updatedAt} />
+                < ProductsAdminPage key={products.id} id={products.id} name={products.name} value={products.value} image={products.image} createdAt={products.createdAt} updatedAt={products.updatedAt} />
             ))}
             <Footer />
         </>
