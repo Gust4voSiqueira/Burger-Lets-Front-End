@@ -1,0 +1,127 @@
+h1{
+    color: black;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 2% 1%;
+}
+
+label#label-requestForm{
+    color: black;
+    display: block;
+
+    margin: 0px 0px 10px 1%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 0;
+    width: 0;
+    background-color: white;
+    padding: 10px 0px;
+}
+#requests-button{
+    display: none;
+    color: white;
+    border-radius: 8px;
+    margin-left: 1%;
+    cursor: pointer;
+    padding: 10px 65px;
+
+    background: #1d2528;
+  }
+  #requests-button:hover{
+    background: #2c373b;
+  }
+
+.input-adress{
+    color: black;
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 4px;
+    background: rgb(243, 243, 243);
+    padding: 0.5% 0% 0.5% 0.6%;
+    margin-left: 1%;
+    width: 30%;
+}
+.input-cep-number{
+    color: black;
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 4px;
+    background: rgb(243, 243, 243);
+
+    padding: 0.5% 0% 0.5% 0.6%;
+    margin-left: 1%;
+    width: 10%;
+}
+
+#form-button{
+    border-radius: 8px;
+    margin-left: 1%;
+    cursor: pointer;
+    padding: 10px 65px;
+    background: linear-gradient(45deg, #04d361, #05ac50);
+    margin-bottom: 30px;
+}
+#form-button:hover{
+    background: linear-gradient(45deg, #05ac50,#04d361);
+}
+.error-message{
+    margin-left: 1%;
+    margin-bottom: 2%;
+    color: red;
+    font-size: 0.8rem;
+}
+#entregaImg{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+}
+@media(max-width: 1048px) {
+    .input-adress{
+        width: 70%;
+    }
+    .input-cep-number{
+        width: 20%;
+    }
+    #form-button{
+        border-radius: 8px;
+        margin-left: 39%;
+        margin-top: 25px;
+        cursor: pointer;
+        padding: 10px 65px;
+        background: linear-gradient(45deg, #04d361, #05ac50);
+        margin-bottom: 30px;
+    }
+    #entregaImg{
+        display: none;
+    }
+}
+@media(max-width: 700px) {
+    .input-adress{
+        width: 80%;
+    }
+    .input-cep-number{
+        width: 40%;
+    }
+    #form-button{
+        border-radius: 8px;
+        margin-left: 27%;
+        margin-top: 25px;
+        cursor: pointer;
+        padding: 10px 65px;
+        background: linear-gradient(45deg, #04d361, #05ac50);
+        margin-bottom:10px;
+    }
+    #entregaImg{
+        display: none;
+    }
+    #requests-button{
+        border-radius: 8px;
+        margin-left: 27%;
+        cursor: pointer;
+        padding: 10px 55px;
+        background: #1d2528;
+        margin-bottom: 0px;
+        
+      }
+      div#buttons{
+          margin-bottom: 150px;
+      }
+}

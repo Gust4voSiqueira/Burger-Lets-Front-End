@@ -1,0 +1,85 @@
+
+
+section.buttons {
+  display: block;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+section.buttons button {
+  padding: 15px 25px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+section.buttons button.adress {
+  background: rgb(95, 95, 95);
+}
+
+section.buttons button.finally {
+  background: linear-gradient(45deg, #04d361, #05ac50);
+}
+
+section.buttons button.finally:hover {
+  background: linear-gradient(45deg, #05ac50, #04d361);
+}
+
+div#cart-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+div#cart-container img {
+  width: 40%;
+}
+div#cart-container h1{
+  font-size: 1.6rem;
+  color: black;
+}
+strong{
+  color: black;
+  font-size: 1.5rem;
+  display: block;
+  align-items:center ;
+  text-align: center;
+}
+
+@media (max-width: 1048px) {
+  div#cart-container{
+   padding-top: 35%;
+  }
+  div#carrinho-container {
+    display: block;
+    justify-content: space-between;
+
+    padding: 30px 20px;
+    margin: 10px;
+    border: 1px solid rgb(216, 208, 212);
+  }
+
+  div#carrinho-container section {
+      margin: 10px;
+  }
+
+  section.section-image {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+  }
+  div#carrinho-container img {
+    cursor: pointer;
+    width: 10%;
+    margin: auto;
+  }
+  section.buttons button.adress {
+   margin-bottom: 50px;
+  }
+}

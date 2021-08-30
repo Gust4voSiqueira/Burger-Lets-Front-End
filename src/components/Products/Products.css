@@ -1,0 +1,117 @@
+div.products{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #fd6505;
+
+    display: inline-block;
+    width: 25.3%;
+    height: 45%;
+    padding-bottom: 40px;
+    margin: 15px 4%;
+}
+p#mensagem-carrinho{
+    display: block;
+    margin-top: 18px;
+}
+div.products h3{
+    margin-top: 10px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+div.buy{
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    border-radius: 10px;
+    margin: auto;
+    height: 2.5rem;
+    width: 50%;
+
+    background:linear-gradient(45deg, #04d361, #05ac50);
+    font-weight: 500;
+    color: black;
+}
+div#icons-div{
+    display: flex;
+    justify-content: space-between;
+}
+#icon-ingredients{  
+    font-size: 24pt;
+    cursor: pointer;
+}
+#icon-comments{
+    font-size: 24pt;
+    cursor: pointer;
+}
+div.buy:hover{
+    cursor: pointer;
+    background:linear-gradient(45deg,#05ac50, #04d361);
+}
+div.products img{
+    margin: 15px auto;
+    width: 88%;
+    height: 19rem;
+    border-radius: 3px;
+}
+
+@media(max-width: 1048px) {
+    div.products{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: #fd6505;
+    
+        display: inline-block;
+        width: 40%;
+    
+        padding-bottom: 45px;
+        margin: 15px 5%;
+    }
+    p#mensagem-carrinho{
+        display: block;
+        margin-left: 10%;
+        position: absolute;
+    }
+    #icon-ingredients{  
+        font-size: 24pt;
+        cursor: pointer;
+    }
+    #icon-comments{
+        font-size: 24pt;
+        cursor: pointer;
+    }
+}
+
+@media(max-width: 700px) {
+    div.products{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: #fd6505;
+        display: inline-block;
+        width: 85%;
+        padding-bottom: 50px;
+        margin: 10px 7.5%;
+    }
+    div.buy{
+        padding-top: 7px;
+    }
+    p#mensagem-carrinho{
+        display: flex;
+        margin-left:25%;
+        position: static;
+    }
+    #icon-ingredients{  
+        font-size: 24pt;
+        cursor: pointer;
+    }
+    #icon-comments{
+        font-size: 24pt;
+        cursor: pointer;
+    }
+    div#icons-div{
+        display: flex;
+        justify-content: space-between;
+    }
+}

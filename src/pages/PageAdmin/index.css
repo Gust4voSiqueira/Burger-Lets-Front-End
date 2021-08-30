@@ -1,0 +1,59 @@
+form.products{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #fd6505;
+
+    display: inline-block;
+    width: 25.3%;
+    height: 45%;
+    padding-bottom: 40px;
+    margin: 15px 4%;
+}
+
+input{
+    display: inline-block;
+    margin: 10px auto;
+    width: 80%;
+
+    padding: 5px 10px;
+    border-radius: 7px;
+
+    color: black;
+}
+
+input.buy{
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    border-radius: 10px;
+    margin: auto;
+    height: 2.5rem;
+    width: 50%;
+
+    background:linear-gradient(45deg, #04d361, #05ac50);
+    font-weight: 500;
+    color: white;
+}
+
+input.buy:hover{
+    cursor: pointer;
+    background:linear-gradient(45deg,#05ac50, #04d361);
+}
+
+.file-div{
+    margin: 15px auto;
+    width: 88%;
+    height: 19rem;
+    border-radius: 3px;
+    background-color: #333;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+
+
+input[type="file"] {
+    display: none;
+}
