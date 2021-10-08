@@ -18,7 +18,7 @@ export default function ProductsAdminPage({ id, name, value, image }) {
         <div className='products'>
             <img src={image} alt="" />
             {edit ?
-                (< input placeholder="Digite aqui o nome" value={name} id='input-edit' onChange={(e) => {
+                (< input placeholder={name} id='input-edit' onChange={(e) => {
                     setNewName(e.target.value)
                 }} />)
                 : (<h3 id='name-product'>{name}</h3>)}
@@ -27,11 +27,7 @@ export default function ProductsAdminPage({ id, name, value, image }) {
                 {edit ? (
                     < SaveIcon id='icon-comments' onClick={() => {
                         setEdit(!edit)
-                        const argument = {
-                            "name": newName,
-                            "value": newValue
-                        }
-                        editProduct(argument, id)
+                        editProduct(newName, newValue, id)
                         document.location.reload(true);
                     }} />
                 ) : (
@@ -40,7 +36,7 @@ export default function ProductsAdminPage({ id, name, value, image }) {
                     }} />
                 )}
                 {edit ?
-                    (< input type='number' placeholder="Valor" value={value} id='input-edit-value' onChange={e => settNewValue(e.target.value)} />)
+                    (< input type='number' placeholder={value} id='input-edit-value' onChange={e => settNewValue(e.target.value)} />)
                     : (
                         <div className='buy'>
                             <p id='product-value'>{value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</p>

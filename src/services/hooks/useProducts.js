@@ -11,6 +11,7 @@ export default function ProductsProvider({ children }) {
         api.get("/")
             .then(function (response) {
                 setProducts(response.data);
+                console.log(response.data)
             })
     }, [])
 
@@ -21,32 +22,45 @@ export default function ProductsProvider({ children }) {
 
     function saveProduct(name, value, arquivo) {
         const imagem = new FormData();
+        const json = {
+            "id": null,
+            "name": name,
+            "image": "bbb",
+            "ingredients": "Carne e Pão",
+            "value": value,
+            "createdAt": new Date(),
+            "updatedAt": new Date()
+        }
 
         imagem.append('imagem', {
             arquivo
         });
 
-        api.post("/post", imagem, {
-            headers: {
-                'Content-Type': 'multipart/form-data',
-            },
-            "name": name,
-            "value": value,
-        }).then(function (response) {
-            setProducts(response.data);
-        })
+        api.post("/", json)
+            .then(function (response) {
+                setProducts(response.data);
+            })
     }
 
     function deleteProduct(id) {
-        api.delete(`/delete/${id}`)
+        api.delete(`/${id}`)
             .then(function (response) {
                 console.log(response.data);
             })
     }
 
-    function editProduct(argumento, id) {
-        api.put(`/edit/${id}`,
-            argumento
+    function editProduct(name, value, id) {
+        const json = {
+            "id": id,
+            "name": name,
+            "image": "bbb",
+            "ingredients": "Carne e Pão",
+            "value": value,
+            "createdAt": new Date(),
+            "updatedAt": new Date()
+        }
+        api.put("/",
+            json
         ).then(function (response) {
             console.log(response.data);
         })

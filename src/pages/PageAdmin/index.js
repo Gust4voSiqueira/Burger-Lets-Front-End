@@ -33,9 +33,11 @@ export function PageAdmin() {
                     saveProduct(name, value, file)
                 }} />
             </form>
+
             {products.map((products) => (
                 < ProductsAdminPage key={products.id} id={products.id} name={products.name} value={products.value} image={products.image} createdAt={products.createdAt} updatedAt={products.updatedAt} />
             ))}
+            
             <Footer />
         </>
     )
