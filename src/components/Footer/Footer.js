@@ -41,17 +41,15 @@ export default function Footer() {
                         <div id='container-login'>
                             <input type="text" value={user} id='UsernameInput' placeholder='Username' onChange={(e) => setUser(e.target.value)} ></input>
                             <input type="Password" value={password} id='PasswordInput' placeholder='Password' onChange={(e) => setPassword(e.target.value)} ></input>
-                            <input id='button-login' type="button" value='Login' onClick={(e) => {
-                                e.preventDefault()
-                                login(user, password)
-
-                            }} ></input>
+                            <input id='button-login' type="button" value='Login' onClick={() => {
+                                login(login, password)
+                            }} />
                         </div>
                         <div id='container-acesso'>
-                            <input type="text" placeholder='Nome Completo' ></input>
-                            <input type="text" placeholder='Username' ></input>
-                            <input type="Password" placeholder='Password' ></input>
-                            <input id='button-acesso' type="button" value='Requisitar' ></input>
+                            <input type="text" placeholder='Nome Completo' />
+                            <input type="text" placeholder='Username' />
+                            <input type="Password" placeholder='Password' />
+                            <input id='button-acesso' type="button" value='Requisitar' />
                         </div>
                     </div>
 

@@ -100,6 +100,8 @@ input#search{
             align-items: center;
             text-align: center;
             justify-content:center;
+
+            z-index: 2;
         }
         nav#main-mobile li{
             text-decoration: none;

@@ -7,14 +7,17 @@ import history from './history'
 const AuthContext = createContext()
 
 export default function AuthProvider({ children }) {
-    const [authenticated, setAuthenticated] = useState(false)
+    const [ authenticated, setAuthenticated ] = useState(false)
 
-    async function login(user, password) {
-        await api.get(`/User/validarSenha?login=${user}&password=${password}`)
+    function login(login, password) {
+        const data = {
+            "login": login,
+            "password": password
+        }
+        api.get("/User/validarSenha", data)
             .then(function (response) {
                 if (response.data) {
                     setAuthenticated(true)
-                    history.push("/PageAdmin")
                 }
             })
     }
