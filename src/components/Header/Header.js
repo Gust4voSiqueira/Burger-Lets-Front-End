@@ -14,9 +14,9 @@ function Header() {
     const { busca } = useSearch()
     return (
         <>
-            <div id='container-header'>
+            <div className='container-header'>
                 <nav>
-                    <img src={logo} id='logo' />
+                    <img src={logo} className='logo' />
 
                     <input type='text' autoComplete='off' className='search' placeholder='Pesquisar' onChange={(e) => {
                         busca(e.target.value)
@@ -30,7 +30,7 @@ function Header() {
                     </ul>
                 </nav>
             </div>
-            <nav id='main-mobile'>
+            <nav id='main-mobile' className="main-mobile">
                 <Link to="/"><li>< HomeOutlinedIcon className='icons' /></li></Link>
                 <li onClick={() => {
                     { document.getElementById('search').style.display = "block" }

@@ -26,13 +26,15 @@ function Products({ id, name, value, image }: Products) {
         quantities: 1,
         subTotal: 0
     }
+
     return (
         <>
             <div className='products'>
-                <img src={image} alt="" />
+                <img src={image} alt="Burger" />
+
                 <h3>{name}</h3>
-                <div id='icons-div'>
-                    < RestaurantIcon id='icon-ingredients' />
+                <div className='icons-div'>
+                    < RestaurantIcon className='icon-ingredients' />
                     <div className='buy'>
                         <p onClick={() => {
                             setMsg(!msg)
@@ -44,11 +46,9 @@ function Products({ id, name, value, image }: Products) {
                         }}>{value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</p>
 
                     </div>
-                    < ModeCommentIcon id='icon-comments' />
+                    < ModeCommentIcon className='icon-comments' />
                 </div>
                 <p id='mensagem-carrinho'>{msg === false && "Clique para adicionar"}{msg && "Adicionado no carrinho!"}</p>
-
-
             </div>
 
         </>

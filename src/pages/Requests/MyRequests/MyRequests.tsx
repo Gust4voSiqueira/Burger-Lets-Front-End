@@ -19,7 +19,7 @@ export function MyRequests({ id, name, amount, value, image }: cartProps) {
 
     return (
         <>
-            <div id="carrinho-container">
+            <div className="carrinho-container">
                 < section className='product-name'>
                     <h1>Produto</h1>
                     <span>{name}</span>
@@ -47,9 +47,9 @@ export function MyRequests({ id, name, amount, value, image }: cartProps) {
                 }} />
             </div>
 
-            <div id="carrinho-container-mobile">
+            <div id="carrinho-container-mobile" className='carrinho-container-mobile'>
                 <header><span style={{ color: "black" }}>PRODUTO</span><span style={{ color: "#05AC50" }}>{(value * quantities).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</span></header>
-                <section id="body-carrinho">
+                <section className="body-carrinho">
                     <img src={image} alt="" />
                     <div>
                         <span>{name}</span>
@@ -66,7 +66,7 @@ export function MyRequests({ id, name, amount, value, image }: cartProps) {
                         </section>
 
                     </div>
-                    <img src={LixeiraIcon} alt="" id='lixeira-icon' onClick={() => {
+                    <img src={LixeiraIcon} alt="" className='lixeira-icon' onClick={() => {
                        remove(id, value * quantities)
                     }} />
                 </section>

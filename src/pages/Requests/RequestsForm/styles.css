@@ -5,7 +5,7 @@ h1{
     margin: 2% 1%;
 }
 
-label#label-requestForm{
+label.label-requestForm{
     color: black;
     display: block;
 
@@ -17,7 +17,7 @@ label#label-requestForm{
     background-color: white;
     padding: 10px 0px;
 }
-#requests-button{
+.requests-button{
     display: none;
     color: white;
     border-radius: 8px;
@@ -27,7 +27,7 @@ label#label-requestForm{
 
     background: #1d2528;
   }
-  #requests-button:hover{
+  .requests-button:hover{
     background: #2c373b;
   }
 
@@ -51,7 +51,7 @@ label#label-requestForm{
     width: 10%;
 }
 
-#form-button{
+.form-button{
     border-radius: 8px;
     margin-left: 1%;
     cursor: pointer;
@@ -59,7 +59,7 @@ label#label-requestForm{
     background: linear-gradient(45deg, #04d361, #05ac50);
     margin-bottom: 30px;
 }
-#form-button:hover{
+.form-button:hover{
     background: linear-gradient(45deg, #05ac50,#04d361);
 }
 .error-message{
@@ -68,7 +68,7 @@ label#label-requestForm{
     color: red;
     font-size: 0.8rem;
 }
-#entregaImg{
+.entregaImg{
     position: absolute;
     left: 50%;
     top: 60%;
@@ -80,7 +80,7 @@ label#label-requestForm{
     .input-cep-number{
         width: 20%;
     }
-    #form-button{
+    .form-button{
         border-radius: 8px;
         margin-left: 39%;
         margin-top: 25px;
@@ -89,7 +89,7 @@ label#label-requestForm{
         background: linear-gradient(45deg, #04d361, #05ac50);
         margin-bottom: 30px;
     }
-    #entregaImg{
+    .entregaImg{
         display: none;
     }
 }
@@ -100,7 +100,7 @@ label#label-requestForm{
     .input-cep-number{
         width: 40%;
     }
-    #form-button{
+    .form-button{
         border-radius: 8px;
         margin-left: 27%;
         margin-top: 25px;
@@ -109,10 +109,10 @@ label#label-requestForm{
         background: linear-gradient(45deg, #04d361, #05ac50);
         margin-bottom:10px;
     }
-    #entregaImg{
+    .entregaImg{
         display: none;
     }
-    #requests-button{
+    .requests-button{
         border-radius: 8px;
         margin-left: 27%;
         cursor: pointer;
@@ -121,7 +121,7 @@ label#label-requestForm{
         margin-bottom: 0px;
         
       }
-      div#buttons{
+      div.buttons{
           margin-bottom: 150px;
       }
 }

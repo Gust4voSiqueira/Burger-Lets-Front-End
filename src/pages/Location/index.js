@@ -14,7 +14,7 @@ function Location() {
             <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
             <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
             < Header />
-            <MapContainer id='map-location' center={[-16.1544481, -47.9318876]} zoom={15.25}>
+            <MapContainer className='map-location' center={[-16.1544481, -47.9318876]} zoom={15.25}>
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

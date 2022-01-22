@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import CartProvider from "./services/hooks/useCart";
-import SearchProvider from "./services//hooks/useSearch";
+import SearchProvider from "./services/hooks/useSearch";
 import ProductsProvider from "./services/hooks/useProducts";
 import Landing from './Landing'
 import Location from "./pages/Location/index";
-import RequestsForm from "./pages/Requests/RequestsForm/requests-form";
+import RequestsForm from "./pages/Requests/RequestsForm";
 import Requests from "./pages/Requests/RequestsPage";
 import { PageAdmin } from './pages/PageAdmin'
 

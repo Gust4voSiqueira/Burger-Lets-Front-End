@@ -1,118 +1,116 @@
-div#carrinho-container {
-    display: flex;
-    justify-content: space-between;
+div.carrinho-container {
+  display: flex;
+  justify-content: space-between;
   
-    padding: 50px 80px;
-    margin: 10px;
-    border: 1px solid rgb(216, 208, 212);
-  }
+  padding: 50px 80px;
+  margin: 10px;
+  border: 1px solid rgb(216, 208, 212);
+}
   
-div#carrinho-container-mobile{
+div.carrinho-container-mobile{
   display: none;
 }
 
-  div#carrinho-container h1 {
-    color: black;
-    font-size: 1.3rem;
-  }
+div.carrinho-container h1 {
+  color: black;
+  font-size: 1.3rem;
+}
   
-  div#carrinho-container span {
-    color: black;
-    font-size: 1.1rem;
-  }
+div.carrinho-container span {
+  color: black;
+  font-size: 1.1rem;
+}
   
-  div#carrinho-container img {
-    cursor: pointer;
-    width: 3%;
-    height: 10%;
-    margin: auto 0px;
-  }
+div.carrinho-container img {
+  cursor: pointer;
+  width: 3%;
+  height: 10%;
+  margin: auto 0px;
+}
   
-  section {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+section {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
   
-  section.quantities button {
-    display: inline-block;
-    padding: 10px 15px;
-    cursor: pointer;
-    background: rgb(95, 95, 95);
-  }
+section.quantities button {
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  background: rgb(95, 95, 95);
+}
   
   section.quantities span {
-    padding: 8px 20px;
-    border: 1px solid rgb(216, 208, 212);
-  }
+  padding: 8px 20px;
+  border: 1px solid rgb(216, 208, 212);
+}
 
   @media (max-width: 1048px) {
-    div#carrinho-container {
+    div.carrinho-container {
       display: none;
     }
-  div#carrinho-container-mobile{
-    display: block;
-    padding: 20px 25px;
-    background: #E5E5E5;
+    div.carrinho-container-mobile{
+      display: block;
+      padding: 20px 25px;
+      background: #E5E5E5;
 
-    width: 90%;
-    margin: 20px auto;
-  }
-  div#carrinho-container-mobile header{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  div#carrinho-container-mobile header span {
-    display: block;
-    font-weight: bold;
-  }
-  div#carrinho-container-mobile section#body-carrinho{
-    display: flex;
-    justify-content: space-between;
-  }
-  div#carrinho-container-mobile section#body-carrinho img{
-    width: 30%;
-  }
-  div#carrinho-container-mobile section#body-carrinho div{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: left;
-    justify-content: left;
-    margin-right: auto;
-    margin-left: 10px;
-  }
-  div#carrinho-container-mobile section#body-carrinho div span{
-    color: black;
-    font-weight: bold;
-  }
-  div#carrinho-container-mobile section#body-carrinho img#lixeira-icon{
-    display: block;
-    width: 8%;
+      width: 90%;
+      margin: 20px auto;
+    }
+    div.carrinho-container-mobile header{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    div.carrinho-container-mobile header span {
+      display: block;
+      font-weight: bold;
+    }
+    div.carrinho-container-mobile section.body-carrinho{
+      display: flex;
+      justify-content: space-between;
+    }
+    div.carrinho-container-mobile section.body-carrinho img{
+      width: 30%;
+    }
+    div.carrinho-container-mobile section.body-carrinho div{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+      margin-right: auto;
+      margin-left: 10px;
+    }
+    div.carrinho-container-mobile section.body-carrinho div span{
+      color: black;
+      font-weight: bold;
+    }
+    div.carrinho-container-mobile section.body-carrinho img.lixeira-icon{
+      display: block;
+      width: 8%;
 
-    margin-top: auto;
-    margin-bottom: 20px;
+      margin-top: auto;
+      margin-bottom: 20px;
 
-    cursor: pointer;
-  }
-  section.quantities{
-    margin-top: 15px;
-  }
-  section.quantities span {
-    padding: 8px 30px;
-    border: 1px solid rgb(216, 208, 212);
-  }
-  section.quantities button {
-    display: inline-block;
-    padding: 10px 20px;
-    cursor: pointer;
-    background: rgb(95, 95, 95);
-  }
-  section.quantities h1{
-    display: none;
-  }
-
-  
+      cursor: pointer;
+    }
+    section.quantities{
+      margin-top: 15px;
+    }
+    section.quantities span {
+      padding: 8px 30px;
+      border: 1px solid rgb(216, 208, 212);
+    }
+    section.quantities button {
+      display: inline-block;
+      padding: 10px 20px;
+      cursor: pointer;
+      background: rgb(95, 95, 95);
+    }
+    section.quantities h1{
+      display: none;
+    }
 }

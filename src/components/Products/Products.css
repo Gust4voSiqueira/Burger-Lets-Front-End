@@ -10,7 +10,7 @@ div.products{
     padding-bottom: 40px;
     margin: 15px 4%;
 }
-p#mensagem-carrinho{
+p.mensagem-carrinho{
     display: block;
     margin-top: 18px;
 }
@@ -32,15 +32,15 @@ div.buy{
     font-weight: 500;
     color: black;
 }
-div#icons-div{
+div.icons-div{
     display: flex;
     justify-content: space-between;
 }
-#icon-ingredients{  
+.icon-ingredients{  
     font-size: 24pt;
     cursor: pointer;
 }
-#icon-comments{
+.icon-comments{
     font-size: 24pt;
     cursor: pointer;
 }
@@ -68,16 +68,16 @@ div.products img{
         padding-bottom: 45px;
         margin: 15px 5%;
     }
-    p#mensagem-carrinho{
+    p.mensagem-carrinho{
         display: block;
         margin-left: 10%;
         position: absolute;
     }
-    #icon-ingredients{  
+    .icon-ingredients{  
         font-size: 24pt;
         cursor: pointer;
     }
-    #icon-comments{
+    .icon-comments{
         font-size: 24pt;
         cursor: pointer;
     }
@@ -97,20 +97,20 @@ div.products img{
     div.buy{
         padding-top: 7px;
     }
-    p#mensagem-carrinho{
+    p.mensagem-carrinho{
         display: flex;
         margin-left:25%;
         position: static;
     }
-    #icon-ingredients{  
+    .icon-ingredients{  
         font-size: 24pt;
         cursor: pointer;
     }
-    #icon-comments{
+    .icon-comments{
         font-size: 24pt;
         cursor: pointer;
     }
-    div#icons-div{
+    div.icons-div{
         display: flex;
         justify-content: space-between;
     }

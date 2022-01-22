@@ -8,11 +8,11 @@
     border: 0;
     box-sizing: border-box;
 }
-img#logo{
+img.logo{
     margin: 1rem 4rem;
     width: 8%;
 }
-div#container-header{
+div.container-header{
     background: #1d2528;
     height: 5%;
     width:100%;
@@ -21,19 +21,19 @@ div#container-header{
     display: flex;
     flex-direction: column;
 }
-nav#main-mobile{
+nav.main-mobile{
     display: none;
 }
-div#container-header ul{
+div.container-header ul{
    float: right;
 }
 .study{
     text-decoration: none;
 }
-div#container-header li a{
+div.container-header li a{
     text-decoration: none;
 }
-div#container-header li{
+div.container-header li{
     display: inline-block;
     margin: 35px 10px;
     border: 1px solid transparent;
@@ -41,7 +41,7 @@ div#container-header li{
     border-radius: 3px;
     padding: 8px;
 }
-div#container-header li:hover{
+div.container-header li:hover{
     cursor: pointer;
     border: 1px solid #fd6505;
     transition: .5s;
@@ -58,12 +58,12 @@ input.search{
 }
 
 @media(max-width: 1048px) {
-    div#container-header li{
+    div.container-header li{
     display: inline-block;
     margin: 30px 0px 0px 0px;
     padding: 0px 11px 0px 11px;
     }
-    div#container-header ul{
+    div.container-header ul{
         position: relative;
         bottom: 75%;
      }
@@ -71,11 +71,11 @@ input.search{
         margin: 15px 60px;
         width: 500px;
     }
-    img#logo{
+    img.logo{
     margin: 10px;
     width: 20%;
     }
-    div#container-header ul{
+    div.container-header ul{
         margin-right: 20px;
     }
     ul li{
@@ -86,10 +86,10 @@ input.search{
         input.search{
             display: none;
         }
-        ul#main-desktop{
+        ul.main-desktop{
             display: none;
         }
-        nav#main-mobile{
+        nav.main-mobile{
             display: inline-block;
             background: #1d2528;
             width: 100%;
@@ -103,7 +103,7 @@ input.search{
 
             z-index: 2;
         }
-        nav#main-mobile li{
+        nav.main-mobile li{
             text-decoration: none;
             display: inline-block;
             list-style: none;

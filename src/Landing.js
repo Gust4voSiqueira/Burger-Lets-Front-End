@@ -3,7 +3,6 @@ import Products from "./components/Products/Products"
 import Footer from './components/Footer/Footer'
 import { useProducts } from "./services/hooks/useProducts"
 
-
 function Landing() {
     const { products } = useProducts()
 

@@ -1,4 +1,4 @@
-footer#container-footer{
+footer.container-footer{
     margin: 0;
     padding: 15px 30px;
     background: black;
@@ -7,21 +7,21 @@ footer#container-footer{
     justify-content: space-between;
 }
 
-textarea#suggestion{
+textarea.suggestion{
     padding: 5px;
     color: black;
 }
 a{
     text-decoration: none;
 }
-a#icons-social{
+a.icons-social{
     display: inline-block;
     margin-left: 80%;
 }
 p{
     margin-bottom: 5px;
 }
-p#login-admin-text{
+p.login-admin-text{
     cursor: pointer;
     border-bottom: 0.7px solid rgba(255, 255, 255, 0.384);
     margin-left: 70%;
@@ -29,7 +29,7 @@ p#login-admin-text{
     font-size: 7pt;
 }
 
-#submit-suggestion{
+.submit-suggestion{
     padding: 3px 10px;
     border-radius: 3px;
     width: 40%;
@@ -39,10 +39,10 @@ p#login-admin-text{
     background: linear-gradient(45deg,#04d361,#05ac50);
     cursor: pointer;
 }
-#submit-suggestion:hover{
+.submit-suggestion:hover{
     background: linear-gradient(45deg, #05ac50,#04d361);
 }
-div#login-admin{
+div.login-admin{
     display: none;
     margin: auto;
     align-items: center;
@@ -51,12 +51,12 @@ div#login-admin{
     background: rgba(58, 57, 57, 0.808);
     padding:1px 0px 30px 0px;
 }
-div#login-admin h1{
+div.login-admin h1{
     color: white;
     font-size: 1rem;
     color: #fd6505;
 }
-div#login-admin input{
+div.login-admin input{
     color: black;
     font-size: 10px;
     display: block;
@@ -66,7 +66,7 @@ div#login-admin input{
     padding: 2px 0px 2px 5px;
 }
 
-div#login-admin input#button-login{
+div.login-admin input.button-login{
     color: black;
     display: block;
     padding: 2px 0px 2px 5px;
@@ -76,31 +76,31 @@ div#login-admin input#button-login{
     background: linear-gradient(45deg,#04d361,#05ac50);
     color: blanchedalmond;
 }
-div#login-admin input#button-login:hover{
+div.login-admin input.button-login:hover{
     background: linear-gradient(45deg, #05ac50,#04d361);
 }
 
-div#login-admin header{
+div.login-admin header{
     display: flex;
     justify-content: space-between;
 }
 
-div#login-admin header li{
+div.login-admin header li{
     list-style: none;
     display: inline-block;
     border: 1px solid rgb(73, 73, 73);
     padding: 0% 9.9%;
     cursor: pointer;
 }
-div#container-login{
+div.container-login{
     width: 80%;
     display: inline-block;
 }
-div#container-acesso {
+div.container-acesso {
 display: none;
 }
 
-div#container-acesso input{
+div.container-acesso input{
     color: black;
     font-size: 10px;
     display: block;
@@ -110,7 +110,7 @@ div#container-acesso input{
     width: 80%;
     padding: 2px 0px 2px 5px;
 }
-div#container-acesso input#button-acesso{
+div.container-acesso input.button-acesso{
     color: black;
     display: block;
     padding: 2px 0px 2px 5px;
@@ -120,23 +120,23 @@ div#container-acesso input#button-acesso{
     background: linear-gradient(45deg,#04d361,#05ac50);
     color: blanchedalmond;
 }
-div#container-acesso input#button-acesso:hover{
+div.container-acesso input.button-acesso:hover{
     background: linear-gradient(45deg, #05ac50,#04d361);
 }
 
 @media(max-width: 1048px) {
-    footer#container-footer{
+    footer.container-footer{
         justify-content: center;
         flex-direction: column;
     }
-    div#redes-sociais{
+    div.redes-sociais{
         margin-top: 30px;
     }
-   p#login-admin-text{
+   p.login-admin-text{
        display: block;
        margin-bottom: 40px;
    }
-   footer#container-footer textarea{
+   footer.container-footer textarea{
        width: 80%;
    }
 }
