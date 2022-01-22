@@ -11,7 +11,6 @@ export default function ProductsProvider({ children }) {
         api.get("/")
             .then(function (response) {
                 setProducts(response.data);
-                console.log(response.data)
             })
     }, [])
 
@@ -20,26 +19,25 @@ export default function ProductsProvider({ children }) {
             .then(response => setProducts(response.data))
     }
 
-    function saveProduct(name, value, arquivo) {
+    function saveProduct(name, value) {
         const imagem = new FormData();
+
         const json = {
-            "id": null,
             "name": name,
-            "image": "bbb",
             "ingredients": "Carne e Pão",
             "value": value,
             "createdAt": new Date(),
             "updatedAt": new Date()
         }
 
-        imagem.append('imagem', {
-            arquivo
-        });
+        json.createdAt = json.createdAt.toISOString().slice(0, -14)
+        json.updatedAt = json.updatedAt.toISOString().slice(0, -14)
 
-        api.post("/", json)
-            .then(function (response) {
-                setProducts(response.data);
-            })
+        /* imagem.append('imagem', {
+            arquivo
+        }); */
+        
+        api.post("/insert", json)
     }
 
     function deleteProduct(id) {
@@ -53,12 +51,15 @@ export default function ProductsProvider({ children }) {
         const json = {
             "id": id,
             "name": name,
-            "image": "bbb",
             "ingredients": "Carne e Pão",
             "value": value,
             "createdAt": new Date(),
             "updatedAt": new Date()
         }
+
+        json.createdAt = json.createdAt.toISOString().slice(0, -14)
+        json.updatedAt = json.updatedAt.toISOString().slice(0, -14)
+
         api.put("/",
             json
         ).then(function (response) {

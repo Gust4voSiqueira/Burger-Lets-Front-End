@@ -18,9 +18,9 @@ function Header() {
                 <nav>
                     <img src={logo} id='logo' />
 
-                    <input type='text' autoComplete='off' id='search' placeholder='Pesquisar' onChange={(e) => {
+                    <input type='text' autoComplete='off' className='search' placeholder='Pesquisar' onChange={(e) => {
                         busca(e.target.value)
-                    }} ></input>
+                    }}></input>
 
 
                     <ul id='main-desktop'>

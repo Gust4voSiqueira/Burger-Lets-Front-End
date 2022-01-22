@@ -46,7 +46,7 @@ div#container-header li:hover{
     border: 1px solid #fd6505;
     transition: .5s;
 }
-input#search{
+input.search{
     text-align: left;
     align-items: left;
     justify-content: left;
@@ -67,7 +67,7 @@ input#search{
         position: relative;
         bottom: 75%;
      }
-    input#search{
+    input.search{
         margin: 15px 60px;
         width: 500px;
     }
@@ -83,7 +83,7 @@ input#search{
     }
 }
     @media(max-width: 700px) {
-        input#search{
+        input.search{
             display: none;
         }
         ul#main-desktop{
@@ -114,7 +114,7 @@ input#search{
             padding-bottom: 2px;
             cursor: pointer;
         }
-        input#search{
+        input.search{
             margin: 15px 15px;
             width: 90%;
         }

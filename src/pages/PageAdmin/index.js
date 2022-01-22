@@ -16,13 +16,13 @@ export function PageAdmin() {
     return (
         <>
             <Header />
-            <form className='products' enctype="multipart/form-data">
+            <form className='products'>
                 <div className='file-div'>
                     <label className='file-div' id='file' for="arquivo">Enviar arquivo</label>
                     <input type="file" name="arquivo" id="arquivo" onChange={(e) => {
                         setFile(e.target.files[0])
                     }} />
-                </div>
+                </div> 
                 < input placeholder="Digite aqui o nome" onChange={(e) => {
                     setName(e.target.value)
                 }} />
@@ -30,12 +30,13 @@ export function PageAdmin() {
                     setValue(e.target.value)
                 }} />
                 <input type='button' className='buy' value='Adicionar' onClick={() => {
-                    saveProduct(name, value, file)
+                    saveProduct(name, value)
+                    document.location.reload(true);
                 }} />
             </form>
 
             {products.map((products) => (
-                < ProductsAdminPage key={products.id} id={products.id} name={products.name} value={products.value} image={products.image} createdAt={products.createdAt} updatedAt={products.updatedAt} />
+                < ProductsAdminPage key={products.id} id={products.id} name={products.name} value={products.value} createdAt={products.createdAt} updatedAt={products.updatedAt} />
             ))}
             
             <Footer />

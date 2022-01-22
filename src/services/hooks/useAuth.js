@@ -2,12 +2,10 @@
 import React, { createContext, useState, useContext } from "react";
 import { api } from "../api";
 
-import history from './history'
-
 const AuthContext = createContext()
 
 export default function AuthProvider({ children }) {
-    const [ authenticated, setAuthenticated ] = useState(false)
+    const [ authenticated, setAuthenticated ] = useState(true)
 
     function login(login, password) {
         const data = {

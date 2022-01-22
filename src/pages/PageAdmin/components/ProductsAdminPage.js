@@ -10,8 +10,8 @@ import { useProducts } from "../../../services/hooks/useProducts";
 
 export default function ProductsAdminPage({ id, name, value, image }) {
     const { deleteProduct, editProduct } = useProducts()
-    const [newName, setNewName] = useState('')
-    const [newValue, settNewValue] = useState('')
+    const [newName, setNewName] = useState(name)
+    const [newValue, setNewValue] = useState(value)
 
     const [edit, setEdit] = useState(false)
     return (
@@ -28,7 +28,7 @@ export default function ProductsAdminPage({ id, name, value, image }) {
                     < SaveIcon id='icon-comments' onClick={() => {
                         setEdit(!edit)
                         editProduct(newName, newValue, id)
-                        document.location.reload(true);
+                        document.location.reload(true); 
                     }} />
                 ) : (
                     < EditIcon id='icon-comments' onClick={() => {
@@ -36,7 +36,7 @@ export default function ProductsAdminPage({ id, name, value, image }) {
                     }} />
                 )}
                 {edit ?
-                    (< input type='number' placeholder={value} id='input-edit-value' onChange={e => settNewValue(e.target.value)} />)
+                    (< input type='number' placeholder={value} id='input-edit-value' onChange={e => setNewValue(e.target.value)} />)
                     : (
                         <div className='buy'>
                             <p id='product-value'>{value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</p>

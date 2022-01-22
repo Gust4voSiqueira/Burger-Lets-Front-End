@@ -16,7 +16,7 @@ export default function Footer() {
             < footer id='container-footer'>
                 <div>
                     <p>Deixe sua sugestão, ela é muito importante para nós!</p>
-                    <textarea id='suggestion' placeholder='Sugestões' rows='5' cols='50'  ></textarea>
+                    <textarea id='suggestion' placeholder='Não saia sem deixar sua sugestão!' rows='5' cols='50'  ></textarea>
                     <input id='submit-suggestion' type='button' value='Enviar Sugestão' onClick={() => {
                         deleteProduct(3)
                     }}></input>
