@@ -19,19 +19,17 @@ export default function ProductsProvider({ children }) {
             .then(response => setProducts(response.data))
     }
 
-    function saveProduct(name, value) {
+    function saveProduct(name, value, ingredients) {
         const imagem = new FormData();
 
         const json = {
             "name": name,
-            "ingredients": "Carne e Pão",
+            "ingredients": ingredients,
+            "comments": [],
             "value": value,
-            "createdAt": new Date(),
-            "updatedAt": new Date()
+            "createdAt": new Date().toISOString().slice(0, -14),
+            "updatedAt": new Date().toISOString().slice(0, -14)
         }
-
-        json.createdAt = json.createdAt.toISOString().slice(0, -14)
-        json.updatedAt = json.updatedAt.toISOString().slice(0, -14)
 
         /* imagem.append('imagem', {
             arquivo
@@ -53,12 +51,31 @@ export default function ProductsProvider({ children }) {
             "name": name,
             "ingredients": "Carne e Pão",
             "value": value,
-            "createdAt": new Date(),
-            "updatedAt": new Date()
+            "createdAt": new Date().toISOString().slice(0, -14),
+            "updatedAt": new Date().toISOString().slice(0, -14)
         }
 
-        json.createdAt = json.createdAt.toISOString().slice(0, -14)
-        json.updatedAt = json.updatedAt.toISOString().slice(0, -14)
+        api.put("/",
+            json
+        ).then(function (response) {
+            console.log(response.data);
+        })
+    }
+
+    function saveComment(id, name, value, commentsOne,commentsNew) {
+        const json = {
+            "id": id,
+            "name": name,
+            "ingredients": "Carne e Pão",
+            "comments": commentsOne,
+            "value":  value,
+            "createdAt": new Date().toISOString().slice(0, -14),
+            "updatedAt": new Date().toISOString().slice(0, -14)
+        }
+
+        json.comments.push(commentsNew)
+
+        console.log(json)
 
         api.put("/",
             json
@@ -72,7 +89,8 @@ export default function ProductsProvider({ children }) {
         products,
         deleteProduct,
         saveProduct,
-        editProduct
+        editProduct,
+        saveComment
     }
 
     return (
@@ -90,13 +108,15 @@ export function useProducts() {
         products,
         deleteProduct,
         saveProduct,
-        editProduct
+        editProduct,
+        saveComment
     } = context
 
     return {
         products,
         deleteProduct,
         saveProduct,
-        editProduct
+        editProduct,
+        saveComment
     }
 }

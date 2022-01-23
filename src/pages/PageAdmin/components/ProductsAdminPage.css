@@ -1,9 +1,9 @@
-input#input-edit{
+input.input-edit{
     margin-top: 11px;
     margin-bottom: 18px;
 }
 
-input#input-edit-value{
+input.input-edit-value{
     width: 40%;
     margin-bottom: 7px;
 }

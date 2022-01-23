@@ -23,28 +23,28 @@ export default function ProductsAdminPage({ id, name, value, image }) {
                 }} />)
                 : (<h3 id='name-product'>{name}</h3>)}
 
-            <div id='icons-div'>
+            <div className='icons-div'>
                 {edit ? (
-                    < SaveIcon id='icon-comments' onClick={() => {
+                    < SaveIcon className='icon-comments' onClick={() => {
                         setEdit(!edit)
                         editProduct(newName, newValue, id)
                         document.location.reload(true); 
                     }} />
                 ) : (
-                    < EditIcon id='icon-comments' onClick={() => {
+                    < EditIcon className='icon-comments' onClick={() => {
                         setEdit(!edit)
                     }} />
                 )}
                 {edit ?
-                    (< input type='number' placeholder={value} id='input-edit-value' onChange={e => setNewValue(e.target.value)} />)
+                    (< input type='number' placeholder={value} className='input-edit-value' onChange={e => setNewValue(e.target.value)} />)
                     : (
                         <div className='buy'>
-                            <p id='product-value'>{value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</p>
+                            <p className='product-value'>{value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</p>
                         </div>
                     )}
 
 
-                < DeleteIcon id='icon-ingredients' onClick={() => {
+                < DeleteIcon className='icon-ingredients' onClick={() => {
                     deleteProduct(id)
                     document.location.reload(true);
                 }} />

@@ -26,7 +26,7 @@ input.buy{
     padding-top: 2.5px;
     padding-bottom: 2.5px;
     border-radius: 10px;
-    margin: auto;
+    margin: 10px auto;
     height: 2.5rem;
     width: 50%;
 
@@ -56,4 +56,22 @@ input.buy:hover{
 
 input[type="file"] {
     display: none;
+}
+
+.icons {
+    display: block;
+    margin: auto;
+
+    cursor: pointer;
+}
+
+.dados-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+p.message-erro {
+    display: block;
+    padding-top: 5px;
+    font-size: 10pt;
 }

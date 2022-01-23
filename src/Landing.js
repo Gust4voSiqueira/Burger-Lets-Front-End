@@ -10,8 +10,14 @@ function Landing() {
         <>
             <Header />
             {products.map((products) => (
-                < Products key={products.id} id={products.id} name={products.name} value={products.value} image={products.image} createdAt={products.createdAt} updatedAt={products.updatedAt} />
-            ))}
+                <Products key={products.id} 
+                           id={products.id} 
+                           name={products.name} 
+                           value={products.value} 
+                           image={products.image}
+                           comments={products.comments}
+                           ingredients={products.ingredients} />
+                    ))}
 
             <Footer />
         </>
