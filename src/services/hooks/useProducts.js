@@ -19,25 +19,24 @@ export default function ProductsProvider({ children }) {
             .then(response => setProducts(response.data))
     }
 
-    function saveProduct(name, value, ingredients) {
-        const imagem = new FormData();
+    function saveProduct(name, value, ingredients, image) {
+        const file = new FormData();
 
-        const json = {
+        const product = {
             "name": name,
-            "ingredients": ingredients,
-            "comments": [],
             "value": value,
+            "comments": [],
+            "image": "",
+            "ingredients": ingredients,
             "createdAt": new Date().toISOString().slice(0, -14),
             "updatedAt": new Date().toISOString().slice(0, -14)
         }
 
-        /* imagem.append('imagem', {
-            arquivo
-        }); */
+        file.append('file', image); 
         
-        api.post("/insert", json)
-    }
+        api.post("/insert", product, file)
 
+    }
     function deleteProduct(id) {
         api.delete(`/${id}`)
             .then(function (response) {

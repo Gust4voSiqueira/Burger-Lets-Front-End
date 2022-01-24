@@ -49,8 +49,11 @@ input.buy:hover{
     color: #FFF;
     text-transform: uppercase;
     text-align: center;
-    display: block;
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-Content:center;
 }
 
 
@@ -74,4 +77,20 @@ p.message-erro {
     display: block;
     padding-top: 5px;
     font-size: 10pt;
+}
+
+.ingredients-form {
+    display: flex;
+    margin-top: 45px;
+}
+
+.ingredients-button {
+    width: 10%;
+    background:linear-gradient(45deg, #04d361, #05ac50);
+    border-radius: 10px;
+    height: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
